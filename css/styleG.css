@@ -24,18 +24,17 @@ body{
 	padding: 10px;
 	margin: auto; 
 	width: 200px;
-	text-decoration: none;
 	display:block !important;
 	text-align:center;
 	color:red !important;
 }
 .conn a :hover {
 	color:red;
-	text-decoration: none;
 }
 .conn a
 {
 	color:white;
+	text-decoration:none;
 }
 .lien a
 {
@@ -89,12 +88,11 @@ h3
 {
     background-image:url(../images/autoroute5.jpg) ;
   color: #fff;
- height: 450px;
- padding: 20px;
+  height: 450px;
+  padding: 20px;
 }
  .text-color
 {
-  color: rgb(63, 205, 127) !important;
   color: rgb(63, 205, 127) !important;
   text-shadow:6px 6px 6px #ffa703;/*#000;*/
   /*border:3px blue solid;
@@ -133,7 +131,6 @@ footer
   color: #fff;
   line-height: 50px;
 	clear: both;
-	margin-top: 200px;
 }
 .text
 {
@@ -154,7 +151,8 @@ footer li a
  footer ul li:hover a
 {
 	list-style:none;
-	color:red !important;
+	color:red;
+	text-decoration: none;
 }
 
 
@@ -174,4 +172,4 @@ footer li a
 		display:none;
 	}
 	
-}*/ 
+}*/
