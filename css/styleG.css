@@ -95,6 +95,11 @@ h3
  .text-color
 {
   color: rgb(63, 205, 127) !important;
+  color: rgb(63, 205, 127) !important;
+  text-shadow:6px 6px 6px #ffa703;/*#000;*/
+  /*border:3px blue solid;
+  border-radius:10px / 5px ;
+  box-shadow:6px 5px 6px  black;*/
 }
 #logo
 {
