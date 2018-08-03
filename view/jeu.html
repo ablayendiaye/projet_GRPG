@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Jeu</title>
+        <style>
+            #output
+            {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Jeu</h1>
+        <table>
+            <tr>
+                <td>Essai de trouver le bon resultat</td>
+                <td><input type="number" id="nombre" value=""></td>
+             </tr>
+             <tr>
+                <td><button onclick="jeu();" type="button" name="button">c'est parti</button></td>
+            </tr>
+        </table>
+        <p id="output"></p>
+        <script >
+                var solution=Math.floor(Math.random()*100)+1;//pour ne pas tomber sur 0
+                console.log("la solution est "+solution);
+                var indice=solution-12;
+                document.getElementById('output').innerHTML="solution est proche de "+indice;
+                var tentative=6;
+             function jeu()
+            {
+                var nombre=document.getElementById('nombre').value;
+                console.log(nombre);
+                if(nombre==solution)
+                {
+                    document.getElementById('output').innerHTML="Breavo!!! Vous avez gagné.";
+                    document.getElementById('nombre').disabled=true;    //desable pour qu'on ne peut plus rentrer de chiffre.
+                }
+                else{
+                    if(tentative==0)
+                    {
+                        document.getElementById('output').innerHTML="Credits épuisés! Vous avez perdu";
+                        document.getElementById('nombre').disabled=true;
+                    }
+                    else if(nombre<solution)
+                    {
+                        tentative=tentative-1;//pour decompter le nbre de tentative.
+                        document.getElementById('output').innerHTML=nombre + " trop petit, recommencer";
+                     }
+                    else{
+                        tentative=tentative-1;
+                        document.getElementById('output').innerHTML=nombre + " trop grand, recommencer";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
